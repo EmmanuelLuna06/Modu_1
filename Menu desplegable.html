@@ -120,25 +120,25 @@
                     <img src="/Pagina/moda.png" alt="Producto 1" class="product-img">
                     <h3>Producto Premium</h3>
                     <p class="product-price">$99.99</p>
-                    <button class="btn-add">Agregar al carrito</button>
+                    <button class="btn-add" onclick="agregarAlCarrito('Producto Premium', 99.99, '/Pagina/moda.png')">Agregar al carrito</button>
                 </div>
                 <div class="product-card">
                     <img src="/Pagina/cosmeticos.png" alt="Producto 2" class="product-img">
                     <h3>Producto Exclusivo</h3>
                     <p class="product-price">$149.99</p>
-                    <button class="btn-add">Agregar al carrito</button>
+                    <button class="btn-add" onclick="agregarAlCarrito('Producto Exclusivo', 149.99, '/Pagina/cosmeticos.png')">Agregar al carrito</button>
                 </div>
                 <div class="product-card">
                     <img src="/Pagina/tecno.png" alt="Producto 3" class="product-img">
                     <h3>Producto Tecnológico</h3>
                     <p class="product-price">$199.99</p>
-                    <button class="btn-add">Agregar al carrito</button>
+                    <button class="btn-add" onclick="agregarAlCarrito('Producto Tecnológico', 199.99, '/Pagina/tecno.png')">Agregar al carrito</button>
                 </div>
                 <div class="product-card">
                     <img src="/Pagina/herramientas.png" alt="Producto 4" class="product-img">
                     <h3>Herramientas Pro</h3>
                     <p class="product-price">$79.99</p>
-                    <button class="btn-add">Agregar al carrito</button>
+                    <button class="btn-add" onclick="agregarAlCarrito('Herramientas Pro', 79.99, '/Pagina/herramientas.png')">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -179,32 +179,15 @@
                 <h1>Mi Carrito</h1>
             </div>
             <div class="cart-container">
-                <div class="cart-items">
-                    <div class="cart-item">
-                        <img src="/Pagina/moda.png" alt="Producto">
-                        <div class="item-details">
-                            <h4>Producto Premium</h4>
-                            <p>Cantidad: 1</p>
-                            <p class="item-price">$99.99</p>
-                        </div>
-                        <button class="btn-remove">Eliminar</button>
-                    </div>
-                    <div class="cart-item">
-                        <img src="/Pagina/tecno.png" alt="Producto">
-                        <div class="item-details">
-                            <h4>Producto Tecnológico</h4>
-                            <p>Cantidad: 2</p>
-                            <p class="item-price">$399.98</p>
-                        </div>
-                        <button class="btn-remove">Eliminar</button>
-                    </div>
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart">Tu carrito está vacío</p>
                 </div>
                 <div class="cart-summary">
                     <h3>Resumen</h3>
-                    <p>Subtotal: <span>$499.97</span></p>
+                    <p>Subtotal: <span id="subtotal">$0.00</span></p>
                     <p>Envío: <span>$10.00</span></p>
-                    <p class="total">Total: <span>$509.97</span></p>
-                    <button class="btn-checkout">Proceder al pago</button>
+                    <p class="total">Total: <span id="total">$10.00</span></p>
+                    <button class="btn-checkout" id="btnCheckout" disabled>Proceder al pago</button>
                 </div>
             </div>
         </div>
