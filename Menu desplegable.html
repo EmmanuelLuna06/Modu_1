@@ -46,25 +46,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="selected">
+                    <a href="#" class="nav-link selected" data-page="inicio">
                         <img src="/icons/house.svg" alt="">
                         <span>Pagina de inicio</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="nav-link" data-page="productos">
                         <img src="/icons/boxopen.svg" alt="">
                         <span>Productos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="nav-link" data-page="cartera">
                         <img src="/icons/wallet.svg" alt="">
                         <span>Cartera</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="nav-link" data-page="carrito">
                         <img src="/icons/cart.svg" alt="">
                         <span>Carrito</span>
                     </a>
@@ -75,38 +75,140 @@
     </div>
     
     <main id="main">
-        <div class="contenedor-imagen">
-            <img src="Pagina/mercado.png" alt="Tu mercado">
-        <div class="tumercado">
-            TU MERCADO GLOBAL
+        <!-- PÁGINA DE INICIO -->
+        <div id="page-inicio" class="page active">
+            <div class="contenedor-imagen">
+                <img src="Pagina/mercado.png" alt="Tu mercado">
+            <div class="tumercado">
+                TU MERCADO GLOBAL
+            </div>
+            <section class="categorias-section">
+              <h2 class="categorias-titulo">CATEGORIAS</h2>
+              
+              <div class="categorias-grid">
+                <div class="categoria-item">
+                  <img src="/Pagina/moda.png" alt="Moda" class="categoria-img">
+                  <p class="categoria-nombre">Moda</p>
+                </div>
+                
+                <div class="categoria-item">
+                  <img src="/Pagina/cosmeticos.png" alt="Cosmeticos" class="categoria-img">
+                  <p class="categoria-nombre">Cosmeticos</p>
+                </div>
+                
+                <div class="categoria-item">
+                  <img src="/Pagina/tecno.png" alt="Tecnologia" class="categoria-img">
+                  <p class="categoria-nombre">Tecnologia</p>
+                </div>
+                
+                <div class="categoria-item">
+                  <img src="/Pagina/herramientas.png    " alt="Herramientas" class="categoria-img">
+                  <p class="categoria-nombre">Herramientas</p>
+                </div>
+              </div>
+            </section>
+            </div>
         </div>
-        <section class="categorias-section">
-  <h2 class="categorias-titulo">CATEGORIAS</h2>
-  
-  <div class="categorias-grid">
-    <div class="categoria-item">
-      <img src="/Pagina/moda.png" alt="Moda" class="categoria-img">
-      <p class="categoria-nombre">Moda</p>
-    </div>
-    
-    <div class="categoria-item">
-      <img src="/Pagina/cosmeticos.png" alt="Cosmeticos" class="categoria-img">
-      <p class="categoria-nombre">Cosmeticos</p>
-    </div>
-    
-    <div class="categoria-item">
-      <img src="/Pagina/tecno.png" alt="Tecnologia" class="categoria-img">
-      <p class="categoria-nombre">Tecnologia</p>
-    </div>
-    
-    <div class="categoria-item">
-      <img src="/Pagina/herramientas.png    " alt="Herramientas" class="categoria-img">
-      <p class="categoria-nombre">Herramientas</p>
-    </div>
-  </div>
-</section>
+
+        <!-- PÁGINA DE PRODUCTOS -->
+        <div id="page-productos" class="page">
+            <div class="page-header">
+                <h1>Productos</h1>
+            </div>
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="/Pagina/moda.png" alt="Producto 1" class="product-img">
+                    <h3>Producto Premium</h3>
+                    <p class="product-price">$99.99</p>
+                    <button class="btn-add">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="/Pagina/cosmeticos.png" alt="Producto 2" class="product-img">
+                    <h3>Producto Exclusivo</h3>
+                    <p class="product-price">$149.99</p>
+                    <button class="btn-add">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="/Pagina/tecno.png" alt="Producto 3" class="product-img">
+                    <h3>Producto Tecnológico</h3>
+                    <p class="product-price">$199.99</p>
+                    <button class="btn-add">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="/Pagina/herramientas.png" alt="Producto 4" class="product-img">
+                    <h3>Herramientas Pro</h3>
+                    <p class="product-price">$79.99</p>
+                    <button class="btn-add">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PÁGINA DE CARTERA -->
+        <div id="page-cartera" class="page">
+            <div class="page-header">
+                <h1>Mi Cartera</h1>
+            </div>
+            <div class="wallet-container">
+                <div class="wallet-card">
+                    <h3>Saldo Disponible</h3>
+                    <p class="wallet-balance">$2,500.00</p>
+                </div>
+                <div class="wallet-card">
+                    <h3>Últimas Transacciones</h3>
+                    <ul class="transactions-list">
+                        <li>
+                            <span>Compra en Moda</span>
+                            <span class="amount">-$50.00</span>
+                        </li>
+                        <li>
+                            <span>Recarga de saldo</span>
+                            <span class="amount">+$100.00</span>
+                        </li>
+                        <li>
+                            <span>Compra en Cosméticos</span>
+                            <span class="amount">-$30.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PÁGINA DE CARRITO -->
+        <div id="page-carrito" class="page">
+            <div class="page-header">
+                <h1>Mi Carrito</h1>
+            </div>
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <img src="/Pagina/moda.png" alt="Producto">
+                        <div class="item-details">
+                            <h4>Producto Premium</h4>
+                            <p>Cantidad: 1</p>
+                            <p class="item-price">$99.99</p>
+                        </div>
+                        <button class="btn-remove">Eliminar</button>
+                    </div>
+                    <div class="cart-item">
+                        <img src="/Pagina/tecno.png" alt="Producto">
+                        <div class="item-details">
+                            <h4>Producto Tecnológico</h4>
+                            <p>Cantidad: 2</p>
+                            <p class="item-price">$399.98</p>
+                        </div>
+                        <button class="btn-remove">Eliminar</button>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3>Resumen</h3>
+                    <p>Subtotal: <span>$499.97</span></p>
+                    <p>Envío: <span>$10.00</span></p>
+                    <p class="total">Total: <span>$509.97</span></p>
+                    <button class="btn-checkout">Proceder al pago</button>
+                </div>
+            </div>
+        </div>
     </main>
-</div>
 
     <script src="/script.js"></script>
 </body>
